@@ -22,6 +22,7 @@ list_for_compute(value, range_value, random_values)
 for x in list_tuple:
     print(x)
 
+# krok pierwszy tzn. za pomocą pętli :-)
 # for data in list_tuple:
 #     if len(data) == 0 or (len(data) > 1 and len(data) < 7):
 #         if len(data) % 2 == 0:
@@ -35,8 +36,12 @@ for data in list_tuple:
     monstrosity = [(sum(data) if (len(data) > 1 and len(data) < 7 and len(data) % 2 == 0) else (sum(data) / len(data)
                     if (len(data) > 1 and len(data) < 7 and len(data) % 2 != 0) else False)) for data in list_tuple]
 
-
-#print(equal_sum)
-#print(equal_medium)
+print('-'*50)
+print("drukuje kolejne wyniki z tupli w których ilość elementów była >1 <7")
+print('-'*50)
+print(f"suma gdy ilość elementów w tupli była parzysta:  {equal_sum}")
+print('-'*50)
+print(f"oraz średnia gdy ilość elementów tupli była nieparzysta {equal_medium}")
+print('-'*50)
 res = list(filter(None, monstrosity))
-print(res)
+print(f"drukuje oba powyższe warunki w kolejności wystąpienia {res}")
