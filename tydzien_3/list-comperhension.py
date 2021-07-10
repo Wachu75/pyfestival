@@ -31,7 +31,7 @@ ladies = [name for name in names if name[-1] == 'a']
 print(ladies)
 
 #-------------------------------------------------------
-# tworzymy litę TUPLI -> persons
+# tworzymy litę TUPLI (...)-> person_2_in_1
 
 persons = [
     ('Janek', 'wisnia', 'Gdynia'),

@@ -33,9 +33,12 @@ for x in list_tuple:
 for data in list_tuple:
     equal_sum = [sum(data) for data in list_tuple if (len(data) > 1 and len(data) < 7 and len(data) % 2 == 0)]
     equal_medium = [sum(data) / len(data) for data in list_tuple if (len(data) > 1 and len(data) < 7 and len(data) % 2 != 0)]
-    monstrosity = [(sum(data) if (len(data) > 1 and len(data) < 7 and len(data) % 2 == 0) else (sum(data) / len(data)
-                    if (len(data) > 1 and len(data) < 7 and len(data) % 2 != 0) else False)) for data in list_tuple]
 
+    monstrosity = [(sum(data) if (1 < len(data) > 7 and len(data) % 2 == 0) else (sum(data) / len(data) if (
+                1 < len(data) > 7 and len(data) % 2 != 0) else False)) for data in list_tuple]
+
+#    monstrosity = [(sum(data) if (len(data) > 1 and len(data) < 7 and len(data) % 2 == 0) else (sum(data) / len(data)
+#                    if (len(data) > 1 and len(data) < 7 and len(data) % 2 != 0) else False)) for data in list_tuple]
 print('-'*50)
 print("drukuje kolejne wyniki z tupli w których ilość elementów była >1 <7")
 print('-'*50)
