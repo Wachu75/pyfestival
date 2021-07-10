@@ -9,11 +9,13 @@ print(cos(1, 2, 9, 9, 9))
 
 
 def log(*args, **kwargs):
-    print(args)
+    print(f"args: {args}")
+    print(*args)
     print(kwargs)
+    print(*kwargs)
 
 
-log(1, 2, 3, hello='ktos', imie='imie')
+log(1,2 , cos='cos1', hello='ktos', imie='imie')
 
 def get_brutto(netto, vat):
     return netto + netto * vat
