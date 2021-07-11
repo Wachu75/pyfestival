@@ -8,7 +8,7 @@ def samogloska(w):
 word = str(input('podaj słowo: '))
 
 samogloski = [
-    'a','e','i','o','u','ą','ę','ó','y'
+    'a','e','i','o','u','ą','ę','y'
 ]
 
 print(samogloska(word))

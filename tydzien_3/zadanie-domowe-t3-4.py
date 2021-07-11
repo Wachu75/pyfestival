@@ -40,4 +40,4 @@ def get_fibonaci(limit):
     return result
 
 
-print(get_fibonaci(8))
+print(get_fibonaci(20))

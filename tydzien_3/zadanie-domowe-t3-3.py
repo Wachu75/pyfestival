@@ -4,4 +4,4 @@ def count_vowels(text):
 print(count_vowels('ala'))
 # 2
 print(count_vowels('programowanie'))
-print(count_vowels('ąsiołek may tęćiowy'))
+print(count_vowels('ile samogłosek jest w tym zdaniu'))
