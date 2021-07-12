@@ -8,6 +8,7 @@
 # 90% bardzo dobry
 # 95% celujący
 
+#może dwie listy z zakresem procentowym i oceną
 def percentValue(percent):
     mark = {0: 'niedostateczny',45: 'dopuszczający',55: 'dostateczny',80: 'dobry',90: 'bardzo dobry',95: 'celujący'}
     keyList = sorted(mark.keys())
