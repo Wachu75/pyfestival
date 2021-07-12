@@ -1,0 +1,1 @@
+#Przygotuj funkcję która zwróci największy wspólny dzielnik dla dwóch liczb przekazanych w jej argumentach.
