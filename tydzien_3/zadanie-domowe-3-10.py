@@ -8,23 +8,18 @@
 # 90% bardzo dobry
 # 95% celujący
 
-#może dwie listy z zakresem procentowym i oceną
-def percentValue(percent):
-    mark = {0: 'niedostateczny',45: 'dopuszczający',55: 'dostateczny',80: 'dobry',90: 'bardzo dobry',95: 'celujący'}
-    keyList = sorted(mark.keys())
 
-    for key, value in enumerate(keyList):
-        print(key)
-        print(value)
-        if value >= percent: print(keyList[key+1])
-        #print(type(percent))
+def percentValue(percent):
+    mark = [(0,'niedostateczny'),(45, 'dopuszczający'),(55, 'dostateczny'),(80, 'dobry'),(90, 'bardzo dobry'),(95, 'celujący'),(101, 'celujacy')]
+    keyList = enumerate(mark)
+
+    for a, b in keyList:
+        if a == (len(mark)-1): break
+        if int(mark[a][0]) <= percent and int(mark[a+1][0]) > percent: return mark[a][1]
 
     return None
 
-print(percentValue(45))
+#print(percentValue(55))
 
-# keyList=sorted(d.keys())
-# for i,v in enumerate(keyList):
-#     if v=='eeee':
-#         print d[keyList[i+1]]
-#         print d[keyList[i-1]]
+percent = int(input('podaj uzyskany w procentach wynik egzaminu: '))
+print(percentValue(percent))
