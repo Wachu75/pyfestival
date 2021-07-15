@@ -11,7 +11,8 @@ print('-'*100)
 # b = len(fruits)
 # print(b)
 for frut in range(len(fruits)):
-    print(fruits[frut])         #nada frut kolejne wartości indexu i wydrukuje kolejne elementy listy
+    print(frut, fruits[frut])  #nada frut kolejne wartości indexu i wydrukuje kolejne elementy listy
+    print(len(fruits[frut]))   #wydrukuje długość słowa
 
 print('-' * 100)
 
