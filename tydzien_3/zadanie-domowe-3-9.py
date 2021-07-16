@@ -1,10 +1,6 @@
 #Dokończ poprzednią pracę domową.. zamianę liczb dziesiętnych na binarne
 #za pomocą pętli while :)
 
-# 10 / 2 = 5 reszta 0
-# 5 / 2 = 4 r 1
-# 4 / 2 = 2 r 0
-# 2 / 2 = 1 jeden przepisujemy
 
 def decimalToBinary(value):
     binary = []
