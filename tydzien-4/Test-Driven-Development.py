@@ -45,3 +45,7 @@ def test_rectangle_area():
     assert rectangle_area(-2, 10) == 0
 # jeżeli coś pójdzie nie tak to powstaje folder .pytest_casch
 # ponowne uruchomienie testowania zaczyna się od miejsca gdzie pierwszy test nie przeszedł
+
+
+if __name__ == '__main__':
+    pass # kod programu
