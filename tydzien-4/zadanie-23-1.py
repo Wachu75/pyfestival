@@ -1,7 +1,7 @@
 
 
 def remove_volwels(text: str) -> str:
-    volwels = 'aeyoiąęAEYOI'
+    volwels = 'aeyoiąęAEYOIĘĄ'
     # result = ''
     #
     # for char in text:
