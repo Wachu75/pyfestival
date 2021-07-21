@@ -18,6 +18,8 @@ def waste_some_time(num_times):
     for _ in range(num_times):
         sum([i**2 for i in range(10000)])
 
+print(waste_some_time(300))
+
 # Timing Functions
 # This decorator works by storing the time just before the function starts running
 # (at the line marked # 1)# and just after the function finishes (at # 2).
