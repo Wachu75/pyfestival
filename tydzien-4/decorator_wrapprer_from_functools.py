@@ -1,8 +1,4 @@
-#  To retrieve it.
-
-#  More generally, it is good practice to use functools.wraps when you create the wrapper,
-#  this makes the wrapper function "look like" the original function. Moreover,
-#  it adds the original function to a __wrapped__ attribute, so:
+#   More generally, it is good practice to use functools .wraps when you create the wrapper,
 
 from datetime import datetime
 from functools import wraps
@@ -22,7 +18,6 @@ def printArg(arg):
     print(f'Your arg is {arg}')
 
 
-#In which case, you can use:
-
 printArg.__wrapped__('aaaa')
+print('*' * 50)
 printArg('bbbbb')
