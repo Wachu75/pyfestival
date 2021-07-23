@@ -7,9 +7,16 @@ def cut_list(start, end):
     return wrapper
 
 
-def test_cut_list():
-    @cut_list(1,5)
-    def sample():
-        return [0,1,2,3,4,5,6,7]
+@cut_list(1,5)
+def sample():
+    return [0,1,2,3,4,5,6,7]
 
-   assert sample() == [1,2,3,4]
+print(str(sample))
+
+#def test_cut_list():
+#@cut_list(1,5)
+#def sample():
+
+        #return [0,1,2,3,4,5,6,7]
+
+   #assert sample() == [1,2,3,4]
