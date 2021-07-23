@@ -13,9 +13,9 @@ def euklides_if(a: int, b: int) ->int:
     return euklides_while(b, a % b)
 
 
-def test_euklides_while():
-    assert euklides_while(8, 4) == 4
-    assert euklides_while(27, 36) == 9
+# def test_euklides_while():
+#     assert euklides_while(8, 4) == 4
+#     assert euklides_while(27, 36) == 9
 
 
 print(euklides_while(8,4))

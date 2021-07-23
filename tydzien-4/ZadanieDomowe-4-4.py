@@ -12,4 +12,4 @@ def test_cut_list():
     def sample():
         return [0,1,2,3,4,5,6,7]
 
-    assert sample() == [1,2,3,4]
+   assert sample() == [1,2,3,4]
