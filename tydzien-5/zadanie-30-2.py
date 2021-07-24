@@ -18,8 +18,8 @@ end_date = date(today.year, month_end, day_end)
 salary = int(input('podaj wynagrodzenie za dzień pracy: '))
 
 day = end_date - start_date
-print(day)
-day1 = abs(day.days)
+day1 = abs(day.days)+1
+print(day1)
 sunday_count = 0
 saturady_count = 0
 
