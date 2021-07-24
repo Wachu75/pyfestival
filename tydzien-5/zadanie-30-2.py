@@ -26,11 +26,12 @@ saturady_count = 0
 for d in range(int(day1)):
     week_day = date(today.year, month_start, day_start)
     week_day = week_day + timedelta(days=d)
-
+    formatted = week_day.strftime("%A.%B.%Y")
+    print(formatted)
     if week_day.strftime("%A") == "Sunday":
         sunday_count += 1
     if week_day.strftime("%A") == "Saturday":
-        saturady_count +=1
+        saturady_count += 1
 
 
 print('niedziel w tym okresie czasu było: ', sunday_count)
