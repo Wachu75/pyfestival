@@ -6,7 +6,7 @@ with open('transakcje-1.csv', encoding='utf8') as input_file:
     content = reader(input_file, delimiter=',')
     next(content) #pomijamy pierwsza linie
     for line in content:
-        created_at, description, value = line
+        created_at, description, value = line # przypisujemy kolejne elementy w lini zmiennym created... ... ...
         print(int(value))
         if int(value) > 0:
             result.append(line)
