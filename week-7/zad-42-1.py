@@ -10,7 +10,7 @@ try:
     print(names[number])
 
 except IndexError:
-    print('nie ma takiego imienia')
+    print('nie ma takiej litery')
 except (TypeError, ValueError) as error:
     print('ERROR: ', error)
 

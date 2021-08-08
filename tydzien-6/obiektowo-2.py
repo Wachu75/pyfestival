@@ -54,9 +54,9 @@ def walka(malpa, rycerz):
         i += 1
 
     if rycerz.czyZywy():
-        print(' wygral ')
+        print(' wygral rycerz')
     else:
-        print('wygral ...')
+        print('wygrała małpa')
 
 def pojedynek(x,y):
     print(x, ' zatakowany przez ', y)

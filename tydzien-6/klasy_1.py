@@ -19,14 +19,25 @@ g = Student('a', 'b', 1)
 # ją jeszcze zwrócić i urzywać GLOBAL
 
 Judi = Student('Judi', 'Jetson', 2)
-
+print(g.hello())
+print(g.firs)
 print(g) #jest to inf jakiej clasy jest g <__main__.Student object at 0x0000021FA860F970>
-print(g.firs, g.last)
-print('semestr: ', g.sem)
-print(g.hello())
+print(dir(g))
+print(type(g))
+print(id(g))
+#print(getattr())
+#print(hasattr(g))
+#print(globals(g))
+#print(locals(g))
+print(callable(g))
+
+#
+#print(g.firs, g.last)
+#print('semestr: ', g.sem)
+#print(g.hello())
 g.promotion()
-print('semestr: ', g.sem)
-print(g.hello())
-x = g # UWAGA NIE TWORZYMY NOWEGO OBIEKTU JEST TO REFERENCJA PRZEZWISKO KOPIA
-print(Judi.firs, " ", Judi.last)
+#print('semestr: ', g.sem)
+#print(g.hello())
+#x = g # UWAGA NIE TWORZYMY NOWEGO OBIEKTU JEST TO REFERENCJA PRZEZWISKO KOPIA
+#print(Judi.firs, " ", Judi.last)
 

@@ -25,8 +25,18 @@ def test_circle_field():
     # when
     field = c.licz_pole()
 
+
     # then
     assert field == pi * r ** 2
+
+
+def test_circle_area():
+    r = 10
+    c = Circle(r)
+
+    area = c.licz_obwod()
+
+    assert area == 2 * pi * r
 
 
 

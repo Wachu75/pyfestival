@@ -6,6 +6,8 @@ class Product:
     def get_price(self) -> float:
         return self._price
 
+    def get_name(self):
+        return self._name
 
 class ListItem:
     def __init__(self, product: Product, quantity: float):
@@ -58,44 +60,49 @@ class List:
 
         return total
 
-
-def test_add_item_to_list_once():
-    # given
-    product = Product('chleb', 4.30)
-    to_buy = List()
-
-    # when
-    to_buy.add_item(product, 3)
-
-    # then
-    assert to_buy.calculate_total_price() == 4.3 * 3
-    assert len(to_buy.list_item()) == 1
+product = Product('chleb', 4.30)
+to_buy = List()
+to_buy.add_item(product, 3)
 
 
-def test_add_the_same_item_to_list_twice():
-    # given
-    product = Product('chleb', 4.30)
-    to_buy = List()
-
-    # when
-    to_buy.add_item(product, 3)
-    to_buy.add_item(product, 3)
-
-    # then
-    assert to_buy.calculate_total_price() == 4.3 * 6
-    assert len(to_buy.list_item()) == 1
-
-
-def test_add_two_diferent_products_to_list():
-    # given
-    product1 = Product('chleb', 4.30)
-    product2 = Product('maslo', 6.0)
-    to_buy = List()
-
-    # when
-    to_buy.add_item(product1, 1)
-    to_buy.add_item(product2, 1)
-
-    # then
-    assert len(to_buy.list_item()) == 2
-    assert to_buy.calculate_total_price() == 10.30
+#
+# def test_add_item_to_list_once():
+#     # given
+#     product = Product('chleb', 4.30)
+#     to_buy = List()
+#
+#     # when
+#     to_buy.add_item(product, 3)
+#
+#     # then
+#     assert to_buy.calculate_total_price() == 4.3 * 3
+#     assert len(to_buy.list_item()) == 1
+#
+#
+# def test_add_the_same_item_to_list_twice():
+#     # given
+#     product = Product('chleb', 4.30)
+#     to_buy = List()
+#
+#     # when
+#     to_buy.add_item(product, 3)
+#     to_buy.add_item(product, 3)
+#
+#     # then
+#     assert to_buy.calculate_total_price() == 4.3 * 6
+#     assert len(to_buy.list_item()) == 1
+#
+#
+# def test_add_two_diferent_products_to_list():
+#     # given
+#     product1 = Product('chleb', 4.30)
+#     product2 = Product('maslo', 6.0)
+#     to_buy = List()
+#
+#     # when
+#     to_buy.add_item(product1, 1)
+#     to_buy.add_item(product2, 1)
+#
+#     # then
+#     assert len(to_buy.list_item()) == 2
+#     assert to_buy.calculate_total_price() == 10.30

@@ -7,7 +7,7 @@ impreza = day.strftime("%d.%m.%y")  # string format time day zostanie sformatowa
 formatted = today.strftime("%A.%B.%Y")
 print(formatted)
 print(day)
-#print(f'dziś jest {today}')
+print(f'dziś jest {today}')
 
 #print(int(date.today().year + 1))
 print('-' * 50)

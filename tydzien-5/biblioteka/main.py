@@ -16,7 +16,7 @@ if action == 'w':
         for book in get_books(cursor):
             print(book)
             book_id, title, author = book
-            print(f'id: {book_id}, tytul: {title}, Author {author}')
+            print(f'Id: {book_id}, Tytul: {title}, Autor {author}')
 
 elif action == 'd':
     with sqlite3.connect('library.db') as connection:

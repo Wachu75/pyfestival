@@ -21,3 +21,6 @@ elif choice == 'd':
     })
     with open('books.json', 'w') as file:
         dump(books, file)
+
+else:
+    print("nie rozumiem")

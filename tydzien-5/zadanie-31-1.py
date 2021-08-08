@@ -7,8 +7,12 @@ from math import fabs
 
 def gess_number():
     guesses.append(abs(target-int(guess.get())))
-    if len(guesses) == 1:
+    diff = abs(target - int(guess.get()))
+    if diff == 1:
+        tip.configure(text='to samo')
         return
+    guesses.append(diff)
+
     if guesses[-1] > guesses[-2]:
         tip.configure(text='zimno')
 

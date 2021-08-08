@@ -6,6 +6,12 @@ class Student:
     def __str__(self):
         return f'{self._data}, semestr: {self._semestr}'
 
+    @property
+    def data(self):
+        return self._data
+
+
 student = Student('kowalski', 1)
-print(student._data)
-print(student._semestr)
+print(student.data)
+print(student._semestr) #pycharm nie podpowiada pól prywatnych ale możemy je wpisać na siłe musimy je znać !
+print(student)

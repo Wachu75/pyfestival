@@ -11,6 +11,7 @@ def send_name():
         messagebox.showerror(title='blad', message='idziesz na sciecie')
 
 window = tk.Tk()
+window.geometry(480*480)
 window.title('test')
 
 label = tk.Label(window, text="kamień")

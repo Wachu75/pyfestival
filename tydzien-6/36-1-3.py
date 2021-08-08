@@ -9,10 +9,10 @@ class Car:
         return f'{self.name}, cena: {self.price}, predkosc: {self.max_speed}'
 
 class Collection:
-    def __init__(self):
-        self.items = []
+    def __init__(self): # nie przekazuje żadnych agrumentów
+        self.items = [] #potrzebuje tylko stworzyć pustą listę
 
-    def add_item(self, item):
+    def add_item(self, item):       # dodanie do naszej listy elementu
         self.items.append(item)
 
     def get_items(self, key, reverse=False):
@@ -29,7 +29,7 @@ if __name__ == '__main__':
         collection.add_item(Car(name, price, max_speed))
 
     for car in collection.get_items(key=lambda c: c.price, reverse=True):  # key wymaga lambda która zwróci wartość po której ma być sortowanie
-        print(car.get_info())
+        print(car.get_info())       #lambda c: c.price pobiera właściwość obiektu c należacego classy Car właściwość ta to price
 
 def test_class_car():
     car = Car(name='Polonez', price=1000, max_speed=120)
