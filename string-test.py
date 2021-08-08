@@ -21,7 +21,8 @@ print(text2)
 print('*' *50)
 print(text)
 print(len(text))
-
+a,b,c = text2.strip().split(' ') #a,b,c = text2.split(' ') też działa ponieważ w text2 nie było białych znaków przed i za stringiem
+print(a, c, b)
 test1 = text.strip(" .") # strip usuwa domyślnie strip() białe znaki przed i za napisem lub znaki zdefiniowane strip(" .") spacje i kropiki
 print('*' *50)
 print(test1)
