@@ -15,6 +15,6 @@ p = Person('asdf','eeeee')
 print(p.sure_name)
 print(p.first_name)
 
-q = Person.from_row('   aaaaa;  sssss')
+q = Person.from_row('   aaaaa;sssss')
 print(q.first_name)
 print(q.sure_name)
