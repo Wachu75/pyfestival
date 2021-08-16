@@ -3,10 +3,9 @@ https://refactoring.guru/pl/design-patterns/builder
 
 https://refactoring.guru/pl/design-patterns/builder/python/example
 
-
 Budowniczy to kreacyjny wzorzec projektowy umożliwiający tworzenie złożonych obiektów krok po kroku.
-
-W przeciwieństwie do innych wzorców kreacyjnych Budowniczy nie zakłada definiowania wspólnego interfejsu dla produktów. Dzięki temu da się wytwarzać różne produkty stosując ten sam proces konstrukcyjny.
+W przeciwieństwie do innych wzorców kreacyjnych Budowniczy nie zakłada definiowania wspólnego interfejsu dla produktów.
+Dzięki temu da się wytwarzać różne produkty stosując ten sam proces konstrukcyjny.
 
 '''
 

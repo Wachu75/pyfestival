@@ -2,7 +2,6 @@ import csv
 from _csv import reader
 from random import choice
 
-import pandas as pd
 
 class Question:
     def __init__(self, question: str, answers: list, correct_answer: int):
