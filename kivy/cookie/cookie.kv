@@ -1,3 +1,7 @@
+#: include shapebutton.kv
+#: include picture.kv
+#: include pictureview.kv
+
 
 <Cookie>:
     canvas.before:
@@ -7,15 +11,11 @@
             size: self.width, self.height
             pos: self.x, self.y
 
-    Widget:
+    PictureView:
         size_hint: 0.46, 0.8
         pos_hint: {'x': 0.02, 'y': 0.02}
-        canvas:
-            Color:
-                rgb: (1,1,1)
-            Rectangle:
-                size: self.width, self.height
-                pos: self.x, self.y
+        Picture:
+            source: 'img/s9.png'
     Widget:
         size_hint: 0.46, 0.8
         pos_hint: {'x': 0.52, 'y': 0.02}
@@ -37,34 +37,30 @@
             Rectangle:
                 size: self.width, self.height
                 pos: self.x, self.y
-        Widget:
-            canvas:
-                Color:
-                    rgb: (1,0,0)
-                Rectangle:
-                    size: self.width, self.height
-                    pos: self.x, self.y
-        Widget:
-            canvas:
-                Color:
-                    rgb: (1,0,0)
-                Rectangle:
-                    size: self.width, self.height
-                    pos: self.x, self.y
-        Widget:
-            canvas:
-                Color:
-                    rgb: (1,0,0)
-                Rectangle:
-                    size: self.width, self.height
-                    pos: self.x, self.y
-        Widget:
-            canvas:
-                Color:
-                    rgb: (1,0,0)
-                Rectangle:
-                    size: self.width, self.height
-                    pos: self.x, self.y
+        ShapeButton:
+            id: line_button
+            name: 'line'
+            background_normal: "img/s9.png"
+            background_down: "img/s7.ipg"
+            on_release: root.shape_button_click(self)
+
+        ShapeButton:
+            id: rectangle_button
+            name: 'rectangle'
+            text: "Rectangle"
+            on_release: root.shape_button_click(self)
+
+        ShapeButton:
+            id: circle_button
+            name: 'circle'
+            text: "Circle"
+            on_release: root.shape_button_click(self)
+
+        ShapeButton:
+            id: freeform_button
+            name: 'freeform'
+            text: "FreeForm"
+            on_release: root.shape_button_click(self)
 
 
     BoxLayout:
