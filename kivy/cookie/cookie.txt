@@ -1,0 +1,17 @@
+
+<Cookie>: # Cookie jest nazwą z klasy class Cookie(Widget): natomiast nazwa pliku cookie.kv jest nazwą z klasy class CookieApp(App): bez App !!!
+    Widget:
+    # Leyouty umożliwiają użycie czegoś w rodzaju podpowiedzi: jeżeli chodzi o połorzwenie i rozmiar w  tym oknie rodzica
+    # jużeli okno rodzić jest typu leyout a u nas jest tak ponieważ Wiget jest w cookie a ono dziedziczy po Cookie(FloatLayout)
+        size_hint: 0.5, 1 # 0.5 to 50% szerokości po x i 1=100% w Y
+        pos_hint: {'x': 0.2, 'y': 0.2} # czyli wskazówka gdzie tenwiget ma się znajdować 1=100% 0.1=10% 0.01=1%
+        canvas: # czyli coś w rodzaju płutna na którym możemy coś rysować
+                # property inaczej właściwość ponieważ piszemy małymi literami!!!
+            Color:
+                rgb: (1,1,1)
+            Rectangle: # nie jest to właściwość canvasu.
+                size: self.width, self.height #self width może działać i odnosi się do samego siebie czyli pola canvas które bierze
+                #informacje z wiget , czyli do właściwości
+                #natomiast Color i Rectangle jest to już definicja tego co chcemy i jak robić - rysować.
+                pos: self.x, self.y
+    BoxLayout: 'vertical' # kolejny leyout różni się tym że kolejne dzieci będzie ustawiał vertical or horizontal

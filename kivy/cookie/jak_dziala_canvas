@@ -1,0 +1,17 @@
+            ____________
+            |           |
+        ------------    |       1
+        |           |   |
+        |           |----
+        |           |           2
+    -------------   |
+    |           |   |
+    |           | ---
+    |           |               3
+    -------------
+
+1-before
+2-canvas na którym normalnie pracujemy
+3-after
+
+i np Label rysuje się na canvas  i dlatego nic nie zobaczymy jak dodamy canvas.before to już ok.
