@@ -24,7 +24,6 @@ def check(e):
                 data.append(item)
     update(data)
 
-
 my_label = Label(root, text="start",font=("Helvetica", 14), fg="grey")
 my_label.pack(pady=20)
 

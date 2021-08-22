@@ -38,31 +38,6 @@ class BaseEmployee:
     def __repr__(self):
         return self.name
 
-    # try:
-    # if dateToday > date_start or dateToday - date_start > 50*365
-    # InvalidDateOfImployment
-
-    def sortTimeEmployment(self):
-        pass
-
-
-# ile dni pracuje dany pracownik od początku
-
-class Employee(BaseEmployee):
-    pass
-
-# stawka godzinowa
-# wymiar etatu
-# premia
-    def salary(self):
-        pass
-
-    def createFullTime(self):
-        pass
-
-    def createPartfTime(self):
-        pass
-
 
 if __name__ == '__main__':
     Application.main()
