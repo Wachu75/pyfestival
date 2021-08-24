@@ -1,11 +1,21 @@
 from kivy.app import App
+from kivy.graphics import Color
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from shapebutton import ShapeButton
 from picture import Picture
 from pictureview import PictureView
+from listview import ListView
+
 
 class Cookie(FloatLayout): # Cookie dziedziczy po Widget/FloatLayout co tam jest wszystko i do tego może być rozbudowywane o nowe funkcjonalności
+
+    def __init__(self, **kwargs):
+        super(Cookie, self).__init__(**kwargs)
+        self.ids.picture.bind(last_drawing=self.drawing_callback) # łaczymy wydażenie zmiany last_drawing na metode drawing_callback
+        self.ids.list_view.layout_manager.bind(selected_nodes=self.drawing_selection_callback)
+        self.drawings = []
+        self.last_selected = 0
 
     def enable_draw_mode(self, mode):
         self.ids.picture.draw_mode = mode
@@ -30,6 +40,28 @@ class Cookie(FloatLayout): # Cookie dziedziczy po Widget/FloatLayout co tam jest
         for key in self.ids:
             if isinstance(self.ids[key], ShapeButton):
                 self.ids[key].selected = False
+
+    def drawing_callback(self, instance, value):
+        self.ids.list_view.data.append({'text': self.ids.picture.draw_mode})
+        self.ids.list_view.layout_manager.clear_selection()
+        self.drawings.append(value)
+
+    def drawing_selection_callback(self, instance, value): #instance to jest nasz leyout_manager a value to lista wybranych
+        if len(value) == 0:
+            return
+
+        self.pain_object(self.drawings[self.last_selected], Color(1, 1, 0))
+        self.last_selected = value[0]
+        self.pain_object(self.drawings[self.last_selected], Color(1, 0, 0))
+
+    def pain_object(self, instance, color):
+        self.ids.picture.canvas.remove(instance)
+        instance.remove(instance.children[0])
+        instance.insert(0, color)
+        self.ids.picture.canvas.add(instance)
+        self.ids.picture.canvas.ask_update()
+
+
 
         # self.ids.line_button.selected = False
         # self.ids.rectangle_button.selected = False
