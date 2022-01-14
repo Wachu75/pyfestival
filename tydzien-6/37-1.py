@@ -40,7 +40,7 @@ ksiazka = Ksiazka(
     'oceniam na 3'
 )
 
-
+print(ksiazka.show())
 #print(Autor.show_autor(bonifacy))
 print(ksiazka.show())
 print(ksiazka.autor[1])
